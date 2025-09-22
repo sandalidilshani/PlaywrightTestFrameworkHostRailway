@@ -92,7 +92,7 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 6192,
+                      "duration": 12017,
                       "error": {
                         "message": "Error: Test data not found for ID: TC13",
                         "stack": "Error: Test data not found for ID: TC13\n    at TestDataHelper.getTestDataById (D:\\temp\\utils\\TestDataHelper.js:63:19)\n    at D:\\temp\\tests\\auth\\login.spec.js:19:31",
@@ -129,7 +129,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-22T16:03:42.760Z",
+                      "startTime": "2025-09-22T16:30:40.175Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -174,7 +174,7 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 6857,
+                      "duration": 12497,
                       "error": {
                         "message": "Error: Test data not found for ID: TC14",
                         "stack": "Error: Test data not found for ID: TC14\n    at TestDataHelper.getTestDataById (D:\\temp\\utils\\TestDataHelper.js:63:19)\n    at D:\\temp\\tests\\auth\\login.spec.js:32:31",
@@ -211,7 +211,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-22T16:03:42.784Z",
+                      "startTime": "2025-09-22T16:30:40.160Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -247,8 +247,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-22T16:03:41.802Z",
-    "duration": 8053.437000000001,
+    "startTime": "2025-09-22T16:30:39.203Z",
+    "duration": 14246.95,
     "expected": 0,
     "skipped": 0,
     "unexpected": 2,
