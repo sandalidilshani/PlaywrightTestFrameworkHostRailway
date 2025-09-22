@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
-  },
+  "start": "node index.js",
+  "test": "playwright test",
+  "install:playwright": "npx playwright install --with-deps"
+}
+,
   "keywords": [],
   "author": "",
   "license": "ISC",
