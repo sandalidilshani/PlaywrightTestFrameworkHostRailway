@@ -1,1 +1,118 @@
-{}
+{
+  "tests": {
+    "TC1": {
+      "projectId": "123"
+    },
+    "TC13": {
+      "email": "sandalidilshanitemp@gmail.com",
+      "password": "RkpSandali@12"
+    },
+    "TC14": {
+      "email": "invaliduser@example.com",
+      "password": "RkpSandali@12"
+    },
+    "TC15": {
+      "email": "sandalidilshanitemp@gmail.com",
+      "password": "WrongPassword!"
+    },
+    "TC16": {
+      "email": "",
+      "password": ""
+    },
+    "TC17": {
+      "email": "sandalidilshanitemp@gmail.com",
+      "password": "Password123!",
+      "maxAttempts": 5
+    },
+    "TC18": {
+      "email": "sandalidilshanitemp@gmail.com"
+    },
+    "TC19": {
+      "email": "rkpsandalidilshani@gmail.com",
+      "otp": "123456",
+      "newPassword": "NewPass123!",
+      "confirmPassword": "NewPass123!"
+    },
+    "TC20": {
+      "email": "rkpsandalidilshani@gmail.com",
+      "otp": "123456",
+      "newPassword": "NewPass123!",
+      "confirmPassword": "NewPass123!"
+    },
+    "TC21": {
+      "admin": {
+        "email": "admin@example.com",
+        "password": "AdminPass123!",
+        "expectedDashboard": "/admin-dashboard"
+      },
+      "user": {
+        "email": "sandalidilshanitemp@gmail.com",
+        "password": "Password123!",
+        "expectedDashboard": "/dashboard"
+      }
+    },
+    "TC22": {
+      "admin": {
+        "email": "admin@example.com",
+        "password": "AdminPass123!"
+      },
+      "nonAdmin": {
+        "email": "user@example.com",
+        "password": "UserPass123!"
+      }
+    },
+    "TC23": {
+      "searchTerm": "John",
+      "expectedResults": [
+        "John Doe",
+        "Johnny Appleseed"
+      ]
+    },
+    "TC24": {
+      "pagination": {
+        "totalUsers": 30,
+        "usersPerPage": 25
+      }
+    },
+    "TC170": {
+      "prefix": "yuy",
+      "name": "Mobile App",
+      "type": "Scrum"
+    },
+    "TC172": {
+      "prefix": "tyi",
+      "name": "Mobile App",
+      "type": "Scrum"
+    },
+    "TC173": {
+      "prefix": "hhw",
+      "name": "Marketing Tasks",
+      "type": "Kanban"
+    },
+    "TC174": {
+      "prefix": "LkQ",
+      "name": "First Project",
+      "type": "Kanban",
+      "duplicateName": "Second Project"
+    },
+    "TC175": {
+      "prefix": "DEV@1",
+      "name": "Test Project"
+    },
+    "TC176": {
+      "prefix": "SCR",
+      "name": "Scrum Project",
+      "type": "Scrum"
+    },
+    "TC177": {
+      "prefix": "KAN",
+      "name": "Kanban Project",
+      "type": "Kanban"
+    },
+    "TC178": {
+      "prefix": "NEW",
+      "name": "New Project",
+      "type": "Software"
+    }
+  }
+}

@@ -126,12 +126,13 @@ app.get("/results-list", (req, res) => {
 
 // Endpoint to trigger tests and return results
 app.post("/trigger-tests", async (req, res) => {
-  const { projectId, tests, callbackUrl } = req.body;
-  console.log("📝 Received start tests request for project:", projectId);
+  const testData = req.body;
+  console.log("📝 Received start tests request for project:", testData);
+  const projectId = testData.projectId || "unknown-project";
 
   // Save incoming test data
   try {
-    const testDataToSave = { projectId, tests, callbackUrl };
+    const testDataToSave = { projectId: testData.projectId, tests: testData };
     fs.writeFileSync('current-test-data.json', JSON.stringify(testDataToSave, null, 2));
     console.log("💾 Test data saved");
   } catch (err) {
@@ -188,26 +189,7 @@ app.post("/trigger-tests", async (req, res) => {
       fs.writeFileSync("latest-results.json", JSON.stringify(parsed, null, 2));
       console.log("💾 Latest results updated");
 
-      // Send to callback URL if provided
-      if (callbackUrl) {
-        try {
-          const fetch = (await import("node-fetch")).default;
-          const response = await fetch(callbackUrl, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(parsed)
-          });
-          
-          if (response.ok) {
-            console.log("📤 Results sent to callbackUrl successfully");
-          } else {
-            console.error(`❌ Failed to send results to callbackUrl: ${response.status} ${response.statusText}`);
-          }
-        } catch (fetchError) {
-          console.error("❌ Error sending to callbackUrl:", fetchError.message);
-        }
-      }
-
+     
       // Return results in the response
       res.json({
         status: "success",

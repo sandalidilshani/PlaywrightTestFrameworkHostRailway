@@ -22,8 +22,14 @@ class TestDataHelper {
                     // Format: { projectId: "123", testData: { TC13: {...} } }
                     this.testData = dynamicData.testData;
                 } else if (dynamicData.tests) {
-                    // Format: { projectId: "123", tests: [...] }
-                    this.testData = this.convertTestsArrayToObject(dynamicData.tests);
+                    // Check if tests is an array or object
+                    if (Array.isArray(dynamicData.tests)) {
+                        // Format: { projectId: "123", tests: [...] }
+                        this.testData = this.convertTestsArrayToObject(dynamicData.tests);
+                    } else {
+                        // Format: { tests: { TC13: {...}, TC14: {...} } }
+                        this.testData = dynamicData.tests;
+                    }
                 } else {
                     // Direct format: { TC13: {...}, TC14: {...} }
                     this.testData = dynamicData;

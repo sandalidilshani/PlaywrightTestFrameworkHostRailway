@@ -92,25 +92,25 @@
                       "workerIndex": 0,
                       "parallelIndex": 0,
                       "status": "failed",
-                      "duration": 12017,
+                      "duration": 18968,
                       "error": {
-                        "message": "Error: Test data not found for ID: TC13",
-                        "stack": "Error: Test data not found for ID: TC13\n    at TestDataHelper.getTestDataById (D:\\temp\\utils\\TestDataHelper.js:63:19)\n    at D:\\temp\\tests\\auth\\login.spec.js:19:31",
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"/dashboard\"]') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"/dashboard\"]') to be visible\u001b[22m\n\n    at LoginPage.validLogin (D:\\temp\\pages\\auth\\LoginPage.js:30:25)\n    at D:\\temp\\tests\\auth\\login.spec.js:22:9",
                         "location": {
-                          "file": "D:\\temp\\utils\\TestDataHelper.js",
-                          "column": 19,
-                          "line": 63
+                          "file": "D:\\temp\\pages\\auth\\LoginPage.js",
+                          "column": 25,
+                          "line": 30
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\TestDataHelper.js:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtestData[trimmedTestId]) {\n \u001b[90m 62 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m'❌ Available test cases:'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mObject\u001b[39m\u001b[33m.\u001b[39mkeys(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtestData))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Test data not found for ID: ${trimmedTestId}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m         }\n \u001b[90m 65 |\u001b[39m         \n \u001b[90m 66 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Found test data for:'\u001b[39m\u001b[33m,\u001b[39m trimmedTestId)\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\auth\\LoginPage.js:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[36masync\u001b[39m validLogin(email\u001b[33m,\u001b[39m password\u001b[33m,\u001b[39m expectedDashboard \u001b[33m=\u001b[39m \u001b[32m'/dashboard'\u001b[39m) {\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlogin(email\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`a[href=\"${expectedDashboard}\"]`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m invalidLogin(email\u001b[33m,\u001b[39m password) {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "D:\\temp\\utils\\TestDataHelper.js",
-                            "column": 19,
-                            "line": 63
+                            "file": "D:\\temp\\pages\\auth\\LoginPage.js",
+                            "column": 25,
+                            "line": 30
                           },
-                          "message": "Error: Test data not found for ID: TC13\n\n   at ..\\utils\\TestDataHelper.js:63\n\n  61 |         if (!this.testData[trimmedTestId]) {\n  62 |             console.log('❌ Available test cases:', Object.keys(this.testData));\n> 63 |             throw new Error(`Test data not found for ID: ${trimmedTestId}`);\n     |                   ^\n  64 |         }\n  65 |         \n  66 |         console.log('✅ Found test data for:', trimmedTestId);\n    at TestDataHelper.getTestDataById (D:\\temp\\utils\\TestDataHelper.js:63:19)\n    at D:\\temp\\tests\\auth\\login.spec.js:19:31"
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"/dashboard\"]') to be visible\u001b[22m\n\n\n   at ..\\pages\\auth\\LoginPage.js:30\n\n  28 |     async validLogin(email, password, expectedDashboard = '/dashboard') {\n  29 |         await this.login(email, password);\n> 30 |         await this.page.waitForSelector(`a[href=\"${expectedDashboard}\"]`, { timeout: 15000 });\n     |                         ^\n  31 |     }\n  32 |\n  33 |     async invalidLogin(email, password) {\n    at LoginPage.validLogin (D:\\temp\\pages\\auth\\LoginPage.js:30:25)\n    at D:\\temp\\tests\\auth\\login.spec.js:22:9"
                         }
                       ],
                       "stdout": [
@@ -124,12 +124,15 @@
                           "text": "📝 Requested test ID: TC13\n"
                         },
                         {
-                          "text": "❌ Available test cases: []\n"
+                          "text": "✅ Found test data for: TC13\n"
+                        },
+                        {
+                          "text": "Test Data for TC13: sandalidilshanitemp@gmail.com\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-22T16:30:40.175Z",
+                      "startTime": "2025-09-22T18:11:41.530Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -144,9 +147,9 @@
                         }
                       ],
                       "errorLocation": {
-                        "file": "D:\\temp\\utils\\TestDataHelper.js",
-                        "column": 19,
-                        "line": 63
+                        "file": "D:\\temp\\pages\\auth\\LoginPage.js",
+                        "column": 25,
+                        "line": 30
                       }
                     }
                   ],
@@ -174,25 +177,25 @@
                       "workerIndex": 1,
                       "parallelIndex": 1,
                       "status": "failed",
-                      "duration": 12497,
+                      "duration": 19519,
                       "error": {
-                        "message": "Error: Test data not found for ID: TC14",
-                        "stack": "Error: Test data not found for ID: TC14\n    at TestDataHelper.getTestDataById (D:\\temp\\utils\\TestDataHelper.js:63:19)\n    at D:\\temp\\tests\\auth\\login.spec.js:32:31",
+                        "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"/dashboard\"]') to be visible\u001b[22m\n",
+                        "stack": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"/dashboard\"]') to be visible\u001b[22m\n\n    at LoginPage.validLogin (D:\\temp\\pages\\auth\\LoginPage.js:30:25)\n    at D:\\temp\\tests\\auth\\login.spec.js:35:9",
                         "location": {
-                          "file": "D:\\temp\\utils\\TestDataHelper.js",
-                          "column": 19,
-                          "line": 63
+                          "file": "D:\\temp\\pages\\auth\\LoginPage.js",
+                          "column": 25,
+                          "line": 30
                         },
-                        "snippet": "\u001b[90m   at \u001b[39m..\\utils\\TestDataHelper.js:63\n\n\u001b[0m \u001b[90m 61 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39m\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtestData[trimmedTestId]) {\n \u001b[90m 62 |\u001b[39m             console\u001b[33m.\u001b[39mlog(\u001b[32m'❌ Available test cases:'\u001b[39m\u001b[33m,\u001b[39m \u001b[33mObject\u001b[39m\u001b[33m.\u001b[39mkeys(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtestData))\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 63 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Test data not found for ID: ${trimmedTestId}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 64 |\u001b[39m         }\n \u001b[90m 65 |\u001b[39m         \n \u001b[90m 66 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m'✅ Found test data for:'\u001b[39m\u001b[33m,\u001b[39m trimmedTestId)\u001b[33m;\u001b[39m\u001b[0m"
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\auth\\LoginPage.js:30\n\n\u001b[0m \u001b[90m 28 |\u001b[39m     \u001b[36masync\u001b[39m validLogin(email\u001b[33m,\u001b[39m password\u001b[33m,\u001b[39m expectedDashboard \u001b[33m=\u001b[39m \u001b[32m'/dashboard'\u001b[39m) {\n \u001b[90m 29 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mlogin(email\u001b[33m,\u001b[39m password)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 30 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m`a[href=\"${expectedDashboard}\"]`\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m15000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                         \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 31 |\u001b[39m     }\n \u001b[90m 32 |\u001b[39m\n \u001b[90m 33 |\u001b[39m     \u001b[36masync\u001b[39m invalidLogin(email\u001b[33m,\u001b[39m password) {\u001b[0m"
                       },
                       "errors": [
                         {
                           "location": {
-                            "file": "D:\\temp\\utils\\TestDataHelper.js",
-                            "column": 19,
-                            "line": 63
+                            "file": "D:\\temp\\pages\\auth\\LoginPage.js",
+                            "column": 25,
+                            "line": 30
                           },
-                          "message": "Error: Test data not found for ID: TC14\n\n   at ..\\utils\\TestDataHelper.js:63\n\n  61 |         if (!this.testData[trimmedTestId]) {\n  62 |             console.log('❌ Available test cases:', Object.keys(this.testData));\n> 63 |             throw new Error(`Test data not found for ID: ${trimmedTestId}`);\n     |                   ^\n  64 |         }\n  65 |         \n  66 |         console.log('✅ Found test data for:', trimmedTestId);\n    at TestDataHelper.getTestDataById (D:\\temp\\utils\\TestDataHelper.js:63:19)\n    at D:\\temp\\tests\\auth\\login.spec.js:32:31"
+                          "message": "TimeoutError: page.waitForSelector: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('a[href=\"/dashboard\"]') to be visible\u001b[22m\n\n\n   at ..\\pages\\auth\\LoginPage.js:30\n\n  28 |     async validLogin(email, password, expectedDashboard = '/dashboard') {\n  29 |         await this.login(email, password);\n> 30 |         await this.page.waitForSelector(`a[href=\"${expectedDashboard}\"]`, { timeout: 15000 });\n     |                         ^\n  31 |     }\n  32 |\n  33 |     async invalidLogin(email, password) {\n    at LoginPage.validLogin (D:\\temp\\pages\\auth\\LoginPage.js:30:25)\n    at D:\\temp\\tests\\auth\\login.spec.js:35:9"
                         }
                       ],
                       "stdout": [
@@ -206,12 +209,15 @@
                           "text": "📝 Requested test ID: TC14\n"
                         },
                         {
-                          "text": "❌ Available test cases: []\n"
+                          "text": "✅ Found test data for: TC14\n"
+                        },
+                        {
+                          "text": "Test Data for TC14: invaliduser@example.com\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-09-22T16:30:40.160Z",
+                      "startTime": "2025-09-22T18:11:41.485Z",
                       "annotations": [],
                       "attachments": [
                         {
@@ -226,9 +232,9 @@
                         }
                       ],
                       "errorLocation": {
-                        "file": "D:\\temp\\utils\\TestDataHelper.js",
-                        "column": 19,
-                        "line": 63
+                        "file": "D:\\temp\\pages\\auth\\LoginPage.js",
+                        "column": 25,
+                        "line": 30
                       }
                     }
                   ],
@@ -247,8 +253,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-22T16:30:39.203Z",
-    "duration": 14246.95,
+    "startTime": "2025-09-22T18:11:40.460Z",
+    "duration": 20750.066,
     "expected": 0,
     "skipped": 0,
     "unexpected": 2,
